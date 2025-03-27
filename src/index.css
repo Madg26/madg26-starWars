@@ -1,0 +1,22 @@
+.logo{
+    width: 60px;
+    height: 60px;
+}
+.scroll{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+.cards{
+    display: flex;   
+}
+#carta2{
+
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    margin: 0 10px;
+    
+}
