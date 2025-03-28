@@ -9,7 +9,10 @@ import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
-import Personajes from "./pages/Personajes";
+import StarWars from "./pages/StarWars";
+import Description from "./pages/Description";
+import Planet_Description from "./Planet_Description";
+import Vehicle_Description from "./Vehicle_Description";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,7 +28,10 @@ export const router = createBrowserRouter(
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
-        <Route path="/" element={<Personajes/>} />
+        <Route path="/" element={<StarWars/>} />
+        <Route path="/description/:uid" element={<Description/>} />
+        <Route path="/planet-description/:uid" element={<Planet_Description/>}/>
+        <Route path="/vehicle-description/:uid" element={<Vehicle_Description/>}/>
       </Route>
     )
 );
