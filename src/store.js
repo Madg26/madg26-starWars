@@ -16,6 +16,7 @@ export const initialStore = () => {
     characters: [],
     planets: [],
     vehicles: [],
+    favorites: []
     
   }
 }
@@ -48,6 +49,7 @@ export default function storeReducer(store, action = {}) {
         ...store,
         vehicles: vehicle
       }
+      case ""
     
     default:
       throw Error('Unknown action.');

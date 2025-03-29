@@ -11,8 +11,8 @@ import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
 import StarWars from "./pages/StarWars";
 import Description from "./pages/Description";
-import Planet_Description from "./Planet_Description";
-import Vehicle_Description from "./Vehicle_Description";
+import VehicleDescription from "./pages/VehicleDescription";
+import PlanetsDescription from "./pages/PlanetsDescription";
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -30,8 +30,8 @@ export const router = createBrowserRouter(
         <Route path="/demo" element={<Demo />} />
         <Route path="/" element={<StarWars/>} />
         <Route path="/description/:uid" element={<Description/>} />
-        <Route path="/planet-description/:uid" element={<Planet_Description/>}/>
-        <Route path="/vehicle-description/:uid" element={<Vehicle_Description/>}/>
+        <Route path="/planet-description/:uid" element={<PlanetsDescription/>}/>
+        <Route path="/vehicle-description/:uid" element={<VehicleDescription/>}/>
       </Route>
     )
 );

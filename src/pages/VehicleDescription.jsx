@@ -1,38 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-
-const Description = () => {
-    const [character, setCharacter] = useState();
+const VehicleDescription = () => {
+    const [vehicles, setVehicles] = useState();
     const { uid } = useParams();
-    function descriptionApi() {
-        fetch("https://www.swapi.tech/api/people/" + uid)
+    function vehiclesApi() {
+        fetch("https://www.swapi.tech/api/starships/" + uid)
             .then((response) => { return response.json() })
             .then((data) => {
                 console.log(data.result.properties);
-                setCharacter(data.result.properties)
+                setVehicles(data.result.properties)
             })
             .catch((err) => { return err })
     }
-
     useEffect(() => {
-        descriptionApi()
+        vehiclesApi()
     }, [])
+
     return (
         <div className=" d-flex justify-content-center">
-            <div className="card mb-3" style={{ "maxWidth": "540px" }}>
+            <div className="card mb-3 text-center" style={{ "maxWidth": "540px" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
                         <img src="" className="img-fluid rounded-start" alt="..." />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">{character && character.name}</h5>
+                            <h5 className="card-title">{vehicles && vehicles.name}</h5>
                             <p className="card-text">
-                                <strong>Color de piel:</strong> {character && character.skin_color}<br />
-                                <strong>Color de ojos:</strong> {character && character.eye_color}<br />
-                                <strong>Genero:</strong> {character && character.gender}</p>
-                            <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                                <strong>Tipo:</strong> {vehicles && vehicles.starship_class}<br />
+                                <strong>Creado por:</strong> {vehicles && vehicles.manufacturer}<br />
+                                <strong>Modelo:</strong> {vehicles && vehicles.model}
+                            </p>
+                            <p className="card-text"><small className="text-body-secondary"></small></p>
                         </div>
                     </div>
                 </div>
@@ -41,4 +41,4 @@ const Description = () => {
     )
 }
 
-export default Description
+export default VehicleDescription
