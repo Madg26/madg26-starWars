@@ -1,7 +1,27 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import useGlobalReducer from '../hooks/useGlobalReducer'
 
 const Planets = ({pl}) => {
+    const {store, dispatch} = useGlobalReducer();
+    const isFavorite = store.favorites.includes(pl.name)
+    const handleFavorite = () => {
+      if (isFavorite === true) {
+        const action = {
+          type: "removeFavorite",
+          payload: pl.name
+        }
+        dispatch(action)
+          }
+          else{
+            const action = {
+              type: "newFavorite",
+              payload: pl.name
+        }
+        dispatch(action)
+      }
+    }
+    console.log(isFavorite);
     const navigate = useNavigate()
     return (
         <div className="card carta2 me-3" style={{ width: "18rem" }}>
@@ -14,7 +34,10 @@ const Planets = ({pl}) => {
                     onClick={()=>{
                         navigate(`/planet-description/${pl.uid}`)
                     }}>Leer mas...</a>
-                    <button type="button" className="btn btn-outline-warning"><i className="fa-regular fa-heart"></i></button>
+                    <button type="button" className="btn btn-outline-warning"
+                    onClick={handleFavorite}>
+                        <i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>
+                    </button>
                 </div>
             </div>
         </div>
