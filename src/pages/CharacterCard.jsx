@@ -22,9 +22,6 @@ const CharacterCard = ({ ch }) => {
       dispatch(action)
     }
   }
-  console.log(isFavorite);
-  
-
   return (
     <div className="card carta2 me-3" style={{ width: "18rem" }}>
       <img src="https://lumiere-a.akamaihd.net/v1/images/databank_admiralcoburn_01_169_8db29cff.jpeg?region=0%2C0%2C1560%2C878" className="card-img-top" alt="..." />
@@ -36,7 +33,7 @@ const CharacterCard = ({ ch }) => {
             onClick={() => {
               navigate(`/description/${ch.uid}`)
             }}>Leer mas...</a>
-          <button type="button" className="btn btn-outline-warning"
+          <button type="button" className="btn btn-outline-danger"
             onClick={handleFavorite}>
             <i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>
           </button>

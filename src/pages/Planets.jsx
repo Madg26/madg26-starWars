@@ -21,7 +21,6 @@ const Planets = ({pl}) => {
         dispatch(action)
       }
     }
-    console.log(isFavorite);
     const navigate = useNavigate()
     return (
         <div className="card carta2 me-3" style={{ width: "18rem" }}>

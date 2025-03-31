@@ -9,7 +9,6 @@ const Description = () => {
         fetch("https://www.swapi.tech/api/people/" + uid)
             .then((response) => { return response.json() })
             .then((data) => {
-                console.log(data.result.properties);
                 setCharacter(data.result.properties)
             })
             .catch((err) => { return err })

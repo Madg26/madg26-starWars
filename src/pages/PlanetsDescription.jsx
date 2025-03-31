@@ -32,7 +32,6 @@ return (
                             <strong>Diametro:</strong> {planet && planet.diameter}<br/>
                             <strong>Gravedad:</strong> {planet && planet.orbital_period}
                         </p>
-                        <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
             </div>

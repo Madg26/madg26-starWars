@@ -32,7 +32,6 @@ const VehicleDescription = () => {
                                 <strong>Creado por:</strong> {vehicles && vehicles.manufacturer}<br />
                                 <strong>Modelo:</strong> {vehicles && vehicles.model}
                             </p>
-                            <p className="card-text"><small className="text-body-secondary"></small></p>
                         </div>
                     </div>
                 </div>
