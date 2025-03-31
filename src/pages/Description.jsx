@@ -31,7 +31,6 @@ const Description = () => {
                                 <strong>Color de piel:</strong> {character && character.skin_color}<br />
                                 <strong>Color de ojos:</strong> {character && character.eye_color}<br />
                                 <strong>Genero:</strong> {character && character.gender}</p>
-                            <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
                 </div>

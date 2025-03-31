@@ -29,10 +29,10 @@ const Planets = ({pl}) => {
                 <h5 className="card-title text-center">
                     {pl.name}</h5>
                 <div className="d-flex justify-content-between mt-3">
-                    <a href="" className="btn btn-primary"
+                    <button className="btn btn-primary"
                     onClick={()=>{
                         navigate(`/planet-description/${pl.uid}`)
-                    }}>Leer mas...</a>
+                    }}>Leer mas...</button>
                     <button type="button" className="btn btn-outline-warning"
                     onClick={handleFavorite}>
                         <i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>

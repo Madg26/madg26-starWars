@@ -29,10 +29,10 @@ const CharacterCard = ({ ch }) => {
         <h5 className="card-title text-center">
           {ch.name}</h5>
         <div className="d-flex justify-content-between mt-3">
-          <a href="" className="btn btn-primary"
+          <button className="btn btn-primary"
             onClick={() => {
               navigate(`/description/${ch.uid}`)
-            }}>Leer mas...</a>
+            }}>Leer mas...</button>
           <button type="button" className="btn btn-outline-danger"
             onClick={handleFavorite}>
             <i className={isFavorite ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i>
